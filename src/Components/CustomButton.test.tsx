@@ -50,6 +50,6 @@ describe("Custom Button Component States", () => {
   });
 
   test("This test sould fail for my Github Action Training", () => {
-    expect(2 + 2).toBe(9999);
+    expect(2 + 2).toBe(4);
   });
 });
