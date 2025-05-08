@@ -1,4 +1,4 @@
-import {CustomButton,  ButtonState } from "./CustomButton";
+import { CustomButton, ButtonState } from "./CustomButton";
 import { fireEvent, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
@@ -22,34 +22,34 @@ describe("Easy Examples", () => {
 describe("Custom Button Component States", () => {
   //Idle
   test("Check if Button Component starts whit Idle", () => {
-    const buttonText: string = "signup"
-    const { getByText } = render(<CustomButton buttonText={buttonText} />)
-    const CustomButtonComponent = getByText(buttonText)
+    const buttonText: string = "signup";
+    const { getByText } = render(<CustomButton buttonText={buttonText} />);
+    const CustomButtonComponent = getByText(buttonText);
 
-    expect(CustomButtonComponent).toHaveClass(ButtonState.IDLE)
+    expect(CustomButtonComponent).toHaveClass(ButtonState.IDLE);
   });
   //Hover
   test("Check if Button Component on hover state changes", () => {
-    const buttonText: string = "signup"
-    const { getByText } = render(<CustomButton buttonText={buttonText} />)
-    const CustomButtonComponent = getByText(buttonText)
+    const buttonText: string = "signup";
+    const { getByText } = render(<CustomButton buttonText={buttonText} />);
+    const CustomButtonComponent = getByText(buttonText);
 
-    expect(CustomButtonComponent).toHaveClass(ButtonState.IDLE)
-    fireEvent.mouseEnter(CustomButtonComponent)
-    expect(CustomButtonComponent).toHaveClass(ButtonState.HOVER)
+    expect(CustomButtonComponent).toHaveClass(ButtonState.IDLE);
+    fireEvent.mouseEnter(CustomButtonComponent);
+    expect(CustomButtonComponent).toHaveClass(ButtonState.HOVER);
   });
   //Clicked
   test("", () => {
-    const buttonText: string = "signup"
-    const { getByText } = render(<CustomButton buttonText={buttonText} />)
-    const CustomButtonComponent = getByText(buttonText)
+    const buttonText: string = "signup";
+    const { getByText } = render(<CustomButton buttonText={buttonText} />);
+    const CustomButtonComponent = getByText(buttonText);
 
-    expect(CustomButtonComponent).toHaveClass(ButtonState.IDLE)
-    fireEvent.click(CustomButtonComponent)
-    expect(CustomButtonComponent).toHaveClass(ButtonState.CLICKED)
+    expect(CustomButtonComponent).toHaveClass(ButtonState.IDLE);
+    fireEvent.click(CustomButtonComponent);
+    expect(CustomButtonComponent).toHaveClass(ButtonState.CLICKED);
   });
 
-  test("This test sould fail for my Github Action Training", ()=>{
-    expect(2+2).toBe(9999)
-  })
+  test("This test sould fail for my Github Action Training", () => {
+    expect(2 + 2).toBe(9999);
+  });
 });
